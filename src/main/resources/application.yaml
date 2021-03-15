@@ -1,0 +1,15 @@
+spring:
+  kafka:
+    streams:
+      application-id: kafka-xml-splitter
+      properties:
+        acks: all
+        security:
+          protocol: SASL_SSL
+        bootstrap:
+          servers: pkc-4r297.europe-west1.gcp.confluent.cloud:9092
+        sasl:
+          jaas:
+            config: org.apache.kafka.common.security.plain.PlainLoginModule required username='<API_KEY_GOES_HERE>' password='<API_SECRET_GOES_HERE>';
+          mechanism: PLAIN
+
